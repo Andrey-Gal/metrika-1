@@ -1,10 +1,13 @@
 h1 {
   font-size: 32px;
   line-height: 60px;
+  font-weight: 700;
+  text-align: center;
   
-  color: red;
+  color: #262525;
 }
 p {
   font-size: 20px;
   line-height: 32px;
+  font-weight: 400;
 }
