@@ -1,47 +1,126 @@
-
-body {
-  body {
-  font-family: 'Raleway', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+/* ===== База ===== */
+:root{
+  --container: 1150px;
+  --text: #121212;
+  --muted: #6B6B6B;
+  --bg: #F5F5F5;
+  --stroke: #E6E6E6;
+  --accent: #B51E1E;
 }
 
+*{ box-sizing: border-box; }
+html,body{ height: 100%; }
 
+body{
+  margin:0;
+  background: var(--bg);
+  color:var(--text);
+  line-height:1.5;
+  font-family: "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
+img{ max-width:100%; height:auto; display:block; }
 
-h1 {
-  font-family: var(--font-family);
-font-weight: 400;
-font-size: 60px;
-line-height: 100%;
-letter-spacing: -0.03em;
-color: var(--text);
-}
-p {
-  font-family: var(--font-family);
-font-weight: 400;
-font-size: 20px;
-letter-spacing: -0.03em;
-color: black;
+.visually-hidden{
+  position:absolute !important;
+  width:1px; height:1px; margin:-1px; padding:0; border:0;
+  clip:rect(0 0 0 0); clip-path: inset(50%);
+  overflow:hidden; white-space:nowrap;
 }
 
-h2 {
-  font-family: var(--font-family);
-font-weight: 400;
-font-size: 18px;
-letter-spacing: -0.03em;
-text-transform: uppercase;
-color: var(--text);
+/* ===== Каркас страницы (как белая «карточка» в макете) ===== */
+.container{
+  width:min(100%, var(--container));
+  margin-inline:auto;
+  padding: clamp(16px, 2vw, 24px);
+  background:#fff;
+  border:1px solid var(--stroke);
+  border-radius:16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.04);
 }
 
-h3{
-  font-family: var(--font-family);
-font-weight: 400;
-font-size: 45px;
-letter-spacing: -0.03em;
-color: var(--text);
+/* ===== Шапка ===== */
+.site-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding-block: 8px 6px;
 }
 
-img {
-  width: 300px;
-  height: 200px;
+.logo{
+  display:inline-block;
+  text-decoration:none;
+  color:var(--text);
+  font-weight:700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.nav{
+  display:flex;
+  gap: clamp(16px, 4vw, 36px);
+}
+
+.nav-link{
+  position:relative;
+  text-decoration:none;
+  text-transform: uppercase;
+  letter-spacing:.05em;
+  font-weight:500;
+  color:var(--muted);
+  font-size: 12px;
+  padding-bottom: 6px;
+}
+
+.nav-link:hover{ color: var(--text); }
+
+.nav-link.is-active{
+  color: var(--text);
+}
+
+.nav-link.is-active::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:0;
+  height:1px;
+  background:#CFCFCF; /* тонкая линия под активным пунктом */
+}
+
+/* ===== Герой ===== */
+.hero{
+  margin: 10px 0 28px;
+  border-radius:14px;
+  overflow:hidden;
+}
+
+.hero img{
+  width:100%;
+  aspect-ratio: 1150 / 650;
+  object-fit: cover;
+}
+
+/* ===== Контент ===== */
+h2{
+  margin: 6px 0 12px;
+  font-weight:700;
+  font-size: clamp(20px, 2.2vw, 28px);
+}
+
+.about p{
+  margin:0 0 6px;
+  max-width: 75ch;
+  color: var(--muted);
+}
+
+/* ===== Адаптив ===== */
+@media (max-width: 680px){
+  .nav{
+    gap:14px;
+  }
+  .nav-link{
+    font-size:11px;
+    letter-spacing:.04em;
+  }
 }

@@ -1,27 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Сайт</title>
-  
+
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Возвращаем Raleway с кириллицей -->
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap&subset=cyrillic" rel="stylesheet">
-
 
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <h1>Современные и стильные интерьеры для комфортной жизни</h>
-    <p>Мы - команда квалифицированных дизайнеров и архитекторов, занимающихся разработкой и реализацией дизайн-проектов</p>
 
-    <img src="/resources/foto-1.png" alt="foto1">
-    <div>
-      <h2>О Нас</h2>
-    </div>
-    <h3></h3>Студия основана в 2011 году. Полностью отдаемся проектированию и реализации интерьеров. К нам обращаются за уютом, индивидуальными решениями и практичностью. Находим конструктивные решения для каждого интерьера, вплоть до каждой детали — нацелены на результат.</h3>
+  <main class="container">
+    <!-- Шапка из макета -->
+    <header class="site-header">
+      <a class="logo" href="#">МЕТРИКА</a>
+      <nav class="nav" aria-label="Главное меню">
+        <a class="nav-link is-active" href="#about">О НАС</a>
+        <a class="nav-link" href="#projects">ПРОЕКТЫ</a>
+        <a class="nav-link" href="#services">УСЛУГИ</a>
+        <a class="nav-link" href="#contacts">КОНТАКТЫ</a>
+      </nav>
+    </header>
+
+    <!-- H1 нужен для доступности, но визуально скрыт, т.к. текст уже на картинке -->
+    <h1 class="visually-hidden">Современные и стильные интерьеры для комфортной жизни</h1>
+
+    <!-- Герой: картинка из Фигмы с текстом внутри -->
+    <figure class="hero">
+      <img src="resources/foto-1.png" width="1150" height="650"
+           alt="Современный интерьер: кресло, торшер и панельная стена">
+    </figure>
+
+    <section id="about" class="about">
+      <h2>О нас</h2>
+      <p>
+        Студия основана в 2011 году. Полностью отдаёмся проектированию и реализации интерьеров.
+        К нам обращаются за уютом, индивидуальными решениями и практичностью. Находим конструктивные
+        решения для каждого интерьера, вплоть до каждой детали — нацелены на результат.
+      </p>
+    </section>
+
+    <!-- Заглушки под следующие блоки макета (позже наполним) -->
+    <section id="projects" hidden></section>
+    <section id="services" hidden></section>
+    <section id="contacts" hidden></section>
+  </main>
+
 </body>
 </html>
-
