@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Возвращаем Raleway с кириллицей -->
+  <!-- Raleway с кириллицей -->
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap&subset=cyrillic" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/styles.css">
@@ -16,7 +16,7 @@
 <body>
 
   <main class="container">
-    <!-- Шапка из макета -->
+    <!-- Шапка как в макете -->
     <header class="site-header">
       <a class="logo" href="#">МЕТРИКА</a>
       <nav class="nav" aria-label="Главное меню">
@@ -27,25 +27,36 @@
       </nav>
     </header>
 
-    <!-- H1 нужен для доступности, но визуально скрыт, т.к. текст уже на картинке -->
+    <!-- H1 оставляем для SEO, визуально скрыт (текст уже на картинке) -->
     <h1 class="visually-hidden">Современные и стильные интерьеры для комфортной жизни</h1>
 
-    <!-- Герой: картинка из Фигмы с текстом внутри -->
+    <!-- Герой: картинка из Фигмы -->
     <figure class="hero">
       <img src="resources/foto-1.png" width="1150" height="650"
            alt="Современный интерьер: кресло, торшер и панельная стена">
     </figure>
 
+    <!-- Блок "О нас" с бейджем и КНОПКОЙ -->
     <section id="about" class="about">
-      <h2>О нас</h2>
-      <p>
+      <p class="eyebrow">о нас</p>
+      <h2 class="visually-hidden">О нас</h2>
+      <p class="about-text">
         Студия основана в 2011 году. Полностью отдаёмся проектированию и реализации интерьеров.
         К нам обращаются за уютом, индивидуальными решениями и практичностью. Находим конструктивные
         решения для каждого интерьера, вплоть до каждой детали — нацелены на результат.
       </p>
+
+      <div class="actions">
+        <a class="btn btn--accent" href="#services">
+          Посмотреть услуги
+          <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M13 5l7 7-7 7M4 12h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
     </section>
 
-    <!-- Заглушки под следующие блоки макета (позже наполним) -->
+    <!-- Заглушки под следующие блоки -->
     <section id="projects" hidden></section>
     <section id="services" hidden></section>
     <section id="contacts" hidden></section>
