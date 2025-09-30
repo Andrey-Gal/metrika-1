@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Raleway с кириллицей -->
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap&subset=cyrillic" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/styles.css">
@@ -16,18 +15,18 @@
 <body>
 
   <main class="container">
-    <!-- Шапка как в макете -->
+    <!-- Шапка -->
     <header class="site-header">
       <a class="logo" href="#">МЕТРИКА</a>
       <nav class="nav" aria-label="Главное меню">
-        <a class="nav-link is-active" href="#about">О НАС</a>
+        <a class="nav-link" href="#about">О НАС</a>
         <a class="nav-link" href="#projects">ПРОЕКТЫ</a>
         <a class="nav-link" href="#services">УСЛУГИ</a>
         <a class="nav-link" href="#contacts">КОНТАКТЫ</a>
       </nav>
     </header>
 
-    <!-- H1 оставляем для SEO, визуально скрыт (текст уже на картинке) -->
+    <!-- H1 оставляем для SEO (текст уже на картинке) -->
     <h1 class="visually-hidden">Современные и стильные интерьеры для комфортной жизни</h1>
 
     <!-- Герой: картинка из Фигмы -->
@@ -36,7 +35,7 @@
            alt="Современный интерьер: кресло, торшер и панельная стена">
     </figure>
 
-    <!-- Блок "О нас" с бейджем и КНОПКОЙ -->
+    <!-- О НАС -->
     <section id="about" class="about">
       <p class="eyebrow">о нас</p>
       <h2 class="visually-hidden">О нас</h2>
@@ -56,10 +55,74 @@
       </div>
     </section>
 
-    <!-- Заглушки под следующие блоки -->
-    <section id="projects" hidden></section>
-    <section id="services" hidden></section>
-    <section id="contacts" hidden></section>
+    <!-- УСЛУГИ (тёмный блок) -->
+    <section id="services" class="services" aria-label="Услуги студии">
+      <h2 class="section-title">услуги</h2>
+
+      <ul class="services-list">
+        <li>
+          <a class="service" href="#">
+            <span class="service-title">Планировочные решения</span>
+            <span class="service-meta">от 50 000 ₽</span>
+          </a>
+        </li>
+        <li>
+          <a class="service" href="#">
+            <span class="service-title">Дизайн-проект</span>
+            <span class="service-meta">от 120 000 ₽</span>
+          </a>
+        </li>
+        <li>
+          <a class="service" href="#">
+            <span class="service-title">Авторский надзор</span>
+            <span class="service-meta">от 30 000 ₽/мес</span>
+          </a>
+        </li>
+        <li>
+          <a class="service" href="#">
+            <span class="service-title">Комплектация</span>
+            <span class="service-meta">сметы, закупки, логистика</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ПРОЕКТЫ -->
+    <section id="projects" class="projects" aria-label="Проекты">
+      <h2 class="section-title">проекты</h2>
+
+      <div class="grid">
+        <!-- КАРТОЧКА 1 -->
+        <article class="project-card">
+          <figure class="project-media">
+            <!-- Если нет картинки, будет серый плейсхолдер -->
+            <!-- <img src="resources/project-1.jpg" alt="ЖК Правобережный — 112 м² — 2023"> -->
+          </figure>
+          <figcaption class="project-caption">
+            <div class="project-name">ЖК ПРАВОБЕРЕЖНЫЙ — 112 м² — 2023</div>
+            <a class="project-link" href="#">Подробнее</a>
+          </figcaption>
+        </article>
+
+        <!-- КАРТОЧКА 2 -->
+        <article class="project-card">
+          <figure class="project-media">
+            <!-- <img src="resources/project-2.jpg" alt="ЖК Оптимиcтика — 55 м² — 2023"> -->
+          </figure>
+          <figcaption class="project-caption">
+            <div class="project-name">ЖК ОПТИМИСТИКА — 55 м² — 2023</div>
+            <a class="project-link" href="#">Подробнее</a>
+          </figcaption>
+        </article>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn--ghost" href="#">Смотреть все проекты</a>
+      </div>
+    </section>
+
+    <!-- Контакты-заглушка -->
+    <section id="contacts" class="contacts" hidden></section>
   </main>
 
 </body>
